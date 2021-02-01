@@ -1,46 +1,33 @@
 set nocompatible              " required
 filetype off                  " required
 set backspace=2
-" set the runtime path to include Vundle and initialize
 
-" alternatively, pass a path where Vundle should install plugins
 call plug#begin('~/.local/share/nvim/plugged')
 
-" let Vundle manage Vundle, required
-Plug 'gmarik/Vundle.vim'
 Plug 'tmhedberg/SimpylFold'
 Plug 'vim-syntastic/syntastic'
 Plug 'nvie/vim-flake8'
 Plug 'scrooloose/nerdtree'
 Plug 'maralla/completor.vim'
-Plug 'vim-scripts/taglist.vim'
-Plug 'junegunn/fzf.vim'
+Plug 'vim-scripts/taglist.vim' " Description of code memebers 
+Plug 'junegunn/fzf.vim'        " Fuzzy file search
 Plug 'sheerun/vim-polyglot' 
-Plug 'davidhalter/jedi'
-Plug 'morhetz/gruvbox'
-Plug 'joshdick/onedark.vim'
-Plug 'tomasr/molokai'
-Plug 'jacoborus/tender'
-Plug 'jnurmine/Zenburn'
-Plug 'tomasiser/vim-code-dark'
-Plug 'chriskempson/base16-vim'
-Plug 'keith/parsec.vim'
-Plug 'dikiaap/minimalist'
+Plug 'davidhalter/jedi'        " Python auto-completor
+Plug 'joshdick/onedark.vim'    " High contrast colorscheme 
+Plug 'tomasr/molokai'          " High contrast colorscheme 
 Plug 'nanotech/jellybeans.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'Vimjas/vim-python-pep8-indent'
-Plug 'sts10/vim-pink-moon'
 Plug 'gosukiwi/vim-atom-dark'
-Plug 'simeji/winresizer'
+Plug 'simeji/winresizer'       " Plugin for facilitating the window managament
 Plug 'xolox/vim-session'
 Plug 'xolox/vim-misc'
 Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'junegunn/goyo.vim'
-"Plug 'numirias/semshi'
+Plug 'junegunn/goyo.vim'       " Plugin for enabling focus mode 
 
-" All of your Plugins must be added before the following line
-call plug#end()            " required
-filetype plugin indent off    " required
+call plug#end()
+
+filetype plugin indent off
 
 au BufNewFile,BufRead *.py
     \ set tabstop=4 |
@@ -64,13 +51,8 @@ let g:session_command_aliases = 1
 
 let g:chromatica#enable_at_startup=1
 
-"set t_Co=256
 syntax on
-set ts=4 sw=4 et 
-
-let g:indent_guides_start_level=1
-let g:indent_guides_guide_size=1
-"let g:indentLine_setConceal=1
+set ts=4 sw=4 et
 
 set nu
 set ruler
@@ -84,7 +66,7 @@ let g:indentLine_char = '│'
 let g:indent_blankline_space_char=' '
 let g:indent_blankline_char='│'
 let g:indent_blankline_indent_level = 4
-"set listchars=tab:>-,trail:·,extends:>,precedes:<
+
 set list
 set nowrap
 
