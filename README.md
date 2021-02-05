@@ -12,11 +12,11 @@ Neovim is a Vim-based editor focused in extensibility. For installing it (tested
 just in Linux systems), execute: 
 #### Fedora 
 ```sh 
-    sudo dnf install nvim 
+    sudo dnf install neovim 
 ```
 #### openSUSE
 ```sh
-    sudo zypper install nvim 
+    sudo zypper install neovim 
 ```
 
 ### Vim-plug
