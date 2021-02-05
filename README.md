@@ -9,7 +9,7 @@ into a more friendly coding and writing environment.
 ### Neovim 
 
 Neovim is a Vim-based editor focused in extensibility. For installing it (tested
-just in Linux systems): 
+just in Linux systems), execute: 
 #### Fedora 
 ```sh 
     sudo dnf install nvim 
@@ -21,11 +21,11 @@ just in Linux systems):
 
 ### Vim-plug
 
-A practical and minimalist Vim plugin installer. For intalling it, just execute:
+A practical and minimalist Vim plugin installer. For intalling it (Unix and Linux), just execute:
 
 ```sh 
-    curl -fLo ~/.var/app/io.neovim.nvim/data/nvim/site/autoload/plug.vim \
-        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 
+    sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 ```
 For downloading the repository and locating it in the proper directory.
 
@@ -49,7 +49,9 @@ init.vim to the proper path in your system in order to make it visible to Neovim
 Now, open Neovim and execute the command :PlugInstall, in order to install all the plugins
 described in init.vim. And it is done. 
 
+## Screenshot 
 
+![A screenshot with the general features](screenshot.png)
 
 
 

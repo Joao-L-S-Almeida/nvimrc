@@ -7,16 +7,16 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'tmhedberg/SimpylFold'
 Plug 'vim-syntastic/syntastic'
 Plug 'nvie/vim-flake8'
-Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree' " Directories tree
 Plug 'maralla/completor.vim'
-Plug 'vim-scripts/taglist.vim' " Description of code memebers 
+Plug 'vim-scripts/taglist.vim' " File objects tree  
 Plug 'junegunn/fzf.vim'        " Fuzzy file search
 Plug 'sheerun/vim-polyglot' 
 Plug 'davidhalter/jedi'        " Python auto-completor
-Plug 'joshdick/onedark.vim'    " High contrast colorscheme 
-Plug 'tomasr/molokai'          " High contrast colorscheme 
-Plug 'nanotech/jellybeans.vim'
-Plug 'vim-airline/vim-airline'
+Plug 'joshdick/onedark.vim'    " Colorscheme 
+Plug 'tomasr/molokai'          " Colorscheme 
+Plug 'nanotech/jellybeans.vim' " Colorscheme 
+Plug 'vim-airline/vim-airline' 
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'gosukiwi/vim-atom-dark'
 Plug 'simeji/winresizer'       " Plugin for facilitating the window managament
