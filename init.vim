@@ -4,13 +4,15 @@ set backspace=2
 
 call plug#begin('~/.local/share/nvim/plugged')
 
-Plug 'tmhedberg/SimpylFold'
+"Plug 'tmhedberg/SimpylFold'
 Plug 'vim-syntastic/syntastic'
+Plug 'bryanmylee/vim-colorscheme-icons'
 Plug 'nvie/vim-flake8'
 Plug 'scrooloose/nerdtree' " Directories tree
 Plug 'maralla/completor.vim'
 Plug 'vim-scripts/taglist.vim' " File objects tree  
-Plug 'junegunn/fzf.vim'        " Fuzzy file search
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim', { 'do': { -> fzf#install() } }        " Fuzzy file search
 Plug 'sheerun/vim-polyglot' 
 Plug 'davidhalter/jedi'        " Python auto-completor
 Plug 'joshdick/onedark.vim'    " Colorscheme 
@@ -24,7 +26,11 @@ Plug 'xolox/vim-session'
 Plug 'xolox/vim-misc'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'junegunn/goyo.vim'       " Plugin for enabling focus mode 
-
+Plug 'vim-airline/vim-airline'
+Plug 'Shougo/deoplete.nvim'
+Plug 'tpope/vim-fugitive'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'bryanmylee/vim-colorscheme-icons'
 call plug#end()
 
 filetype plugin indent off
@@ -40,7 +46,7 @@ au BufNewFile,BufRead *.py
 
 set encoding=utf-8
 
-let g:indent_guides_enable_on_vim_startup = 2
+"let g:indent_guides_enable_on_vim_startup = 2
 let g:python_highlight_all = 1
 
 " session management
@@ -63,13 +69,22 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
 
 let g:indentLine_char = '│'
-let g:indent_blankline_space_char=' '
+"let g:indent_blankline_space_char=' '
 let g:indent_blankline_char='│'
 let g:indent_blankline_indent_level = 4
 
+let g:airline_theme = 'minimalist'
+let g:airline_skip_empty_sections = 1
+let g:airline#extensions#ale#enabled = 1
+let g:airline#extensions#tagbar#enabled = 1
+let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#virtualenv#enabled = 1
+let g:airline_powerline_fonts = 1
+
 set list
 set nowrap
-
+"set termguicolors
 au ColorScheme * hi Normal ctermbg=None
 colorscheme onedark
 set background=dark
